@@ -3,29 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Serhii Pozhar — Hamilton, ON</title>
-<meta name="description" content="Serhii Pozhar — Warehouse Associate, Production Worker, Machine Operator in Hamilton, Ontario.">
+<title>Serhii Pozhar — Warehouse Associate | Hamilton, ON</title>
+<meta name="description" content="Serhii Pozhar — Warehouse Associate, Production Worker and Machine Operator in Hamilton, Ontario. Available immediately.">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     background: #f4f4f2;
     color: #1a1a1a;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
+    line-height: 1.6;
+    padding: 32px 20px 48px;
   }
+  .page { max-width: 760px; margin: 0 auto; }
   .card {
     background: #ffffff;
     border-radius: 20px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-    max-width: 420px;
-    width: 100%;
-    padding: 48px 36px 36px;
-    text-align: center;
+    padding: 40px 36px;
+    margin-bottom: 20px;
   }
+  .header { text-align: center; padding-top: 44px; }
   .avatar {
     width: 96px;
     height: 96px;
@@ -37,16 +34,71 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 24px;
+    margin: 0 auto 20px;
   }
-  h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
-  .headline {
-    font-size: 15px;
-    color: #555;
-    line-height: 1.5;
-    margin-bottom: 6px;
+  h1 { font-size: 30px; font-weight: 700; margin-bottom: 6px; }
+  .headline { font-size: 16px; color: #555; margin-bottom: 4px; }
+  .location { font-size: 14px; color: #888; margin-bottom: 20px; }
+  .badge {
+    display: inline-block;
+    background: #e6f2e9;
+    color: #1e6b34;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 24px;
   }
-  .location { font-size: 14px; color: #888; margin-bottom: 32px; }
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .contact-row a {
+    text-decoration: none;
+    background: #1a3a4a;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 10px;
+    transition: background 0.2s ease;
+  }
+  .contact-row a:hover { background: #25566e; }
+  h2 {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #1a3a4a;
+  }
+  p { font-size: 15px; color: #333; margin-bottom: 12px; }
+  .job { margin-bottom: 22px; }
+  .job:last-child { margin-bottom: 0; }
+  .job-title { font-size: 16px; font-weight: 700; }
+  .job-meta { font-size: 14px; color: #888; margin-bottom: 6px; }
+  .job ul { margin-left: 18px; font-size: 15px; color: #333; }
+  .job li { margin-bottom: 4px; }
+  .edu-item { margin-bottom: 14px; }
+  .edu-item:last-child { margin-bottom: 0; }
+  .edu-title { font-size: 15px; font-weight: 700; }
+  .edu-meta { font-size: 14px; color: #888; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag {
+    background: #eef2f4;
+    color: #1a3a4a;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 999px;
+  }
+  .lang-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; }
+  .lang { font-size: 15px; }
+  .lang span { color: #888; }
+  .cert { font-size: 15px; margin-bottom: 8px; }
+  .cert:last-child { margin-bottom: 0; }
+  .cert span { color: #888; }
   .links { display: flex; flex-direction: column; gap: 12px; }
   .links a {
     display: block;
@@ -57,31 +109,127 @@
     font-weight: 600;
     padding: 14px 20px;
     border-radius: 12px;
+    text-align: center;
     transition: background 0.2s ease, transform 0.1s ease;
   }
   .links a:hover { background: #25566e; }
   .links a:active { transform: scale(0.98); }
-  footer {
-    margin-top: 32px;
-    font-size: 12px;
-    color: #aaa;
+  footer { text-align: center; font-size: 12px; color: #aaa; margin-top: 8px; }
+  @media (max-width: 520px) {
+    .card { padding: 28px 22px; }
+    .lang-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
-  <div class="card">
-    <div class="avatar">SP</div>
-    <h1>Serhii Pozhar</h1>
-    <p class="headline">Warehouse Associate | Production Worker | Machine Operator</p>
-    <p class="location">Hamilton, ON</p>
-    <div class="links">
-      <a href="https://www.linkedin.com/in/serhii-pozhar-0a12a7341/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://profile.indeed.com/" target="_blank" rel="noopener">Indeed</a>
-      <a href="https://www.glassdoor.ca/member/profile/accountSettings" target="_blank" rel="noopener">Glassdoor</a>
-      <a href="https://www.workopolis.com/profile" target="_blank" rel="noopener">Workopolis</a>
-      <a href="https://ca.talent.com/profile" target="_blank" rel="noopener">Talent.com</a>
+  <div class="page">
+
+    <div class="card header">
+      <div class="avatar">SP</div>
+      <h1>Serhii Pozhar</h1>
+      <p class="headline">Warehouse Associate | Production Worker | Machine Operator</p>
+      <p class="location">Hamilton, Ontario, Canada</p>
+      <div class="badge">Available immediately</div>
+      <div class="contact-row">
+        <a href="mailto:serhiy953@gmail.com">Email me</a>
+        <a href="https://www.linkedin.com/in/serhii-pozhar-0a12a7341/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
-    <footer>&copy; 2026 Serhii Pozhar</footer>
+
+    <div class="card">
+      <h2>About</h2>
+      <p>Warehouse and production worker with three years of experience in warehouse operations, food production and assembly-line work in Poland. Now based in Hamilton, Ontario, and seeking warehouse, production and machine-operator roles. Legally authorized to work in Canada, available to start immediately and open to shift work, including nights and weekends.</p>
+    </div>
+
+    <div class="card">
+      <h2>Experience</h2>
+      <div class="job">
+        <div class="job-title">Senior Warehouse Associate</div>
+        <div class="job-meta">THG (via Manpower) — Magnice, Poland &nbsp;|&nbsp; May 2021 – Jun 2023</div>
+        <ul>
+          <li>Order picking, packing and dispatch in a high-volume e-commerce warehouse</li>
+          <li>Receiving, sorting and storing goods; keeping accurate stock records</li>
+          <li>Working to daily targets in a fast-paced team environment</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-title">Production Assembler (Monter)</div>
+        <div class="job-meta">Electrolux — Świdnica, Poland &nbsp;|&nbsp; Feb 2021 – May 2021</div>
+        <ul>
+          <li>Assembling cookers and ovens on a production line</li>
+          <li>Following work instructions and quality standards at line pace</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-title">Production Machine Operator</div>
+        <div class="job-meta">Farmio — Jarocin, Poland &nbsp;|&nbsp; Apr 2020 – Nov 2020</div>
+        <ul>
+          <li>Operating production machines in a food-production plant</li>
+          <li>Monitoring output quality and keeping the work area clean and safe</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Education</h2>
+      <div class="edu-item">
+        <div class="edu-title">English as a Second Language (ESL) — CLB 7</div>
+        <div class="edu-meta">Sir Isaac Brock Learning Centre, Hamilton, ON &nbsp;|&nbsp; Oct 2023 – Apr 2026</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-title">Logistics Technician Diploma (Technikum)</div>
+        <div class="edu-meta">Wrocław, Poland</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-title">General Secondary Education</div>
+        <div class="edu-meta">Makarivs&rsquo;ka ZOSH I–III, Ukraine &nbsp;|&nbsp; Graduated 2014</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Skills</h2>
+      <div class="tags">
+        <span class="tag">Warehouse Operations</span>
+        <span class="tag">Order Picking &amp; Packing</span>
+        <span class="tag">Machine Operation</span>
+        <span class="tag">Assembly Line Work</span>
+        <span class="tag">Food Production</span>
+        <span class="tag">Inventory Handling</span>
+        <span class="tag">Health &amp; Safety Awareness</span>
+        <span class="tag">Shift Work</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Languages</h2>
+      <div class="lang-grid">
+        <div class="lang">Ukrainian <span>— Native</span></div>
+        <div class="lang">Polish <span>— Fluent</span></div>
+        <div class="lang">English <span>— B2 (CLB 7)</span></div>
+        <div class="lang">Russian <span>— Advanced</span></div>
+        <div class="lang">German <span>— A1</span></div>
+        <div class="lang">Slovak <span>— Beginner</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Certifications</h2>
+      <div class="cert">Worker Health &amp; Safety Awareness <span>— Jul 2025</span></div>
+      <div class="cert">Accessibility for Ontarians with Disabilities Act (AODA) <span>— Aug 2025</span></div>
+    </div>
+
+    <div class="card">
+      <h2>Profiles</h2>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/serhii-pozhar-0a12a7341/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://profile.indeed.com/" target="_blank" rel="noopener">Indeed</a>
+        <a href="https://www.glassdoor.ca/member/profile/accountSettings" target="_blank" rel="noopener">Glassdoor</a>
+        <a href="https://www.workopolis.com/profile" target="_blank" rel="noopener">Workopolis</a>
+        <a href="https://ca.talent.com/profile" target="_blank" rel="noopener">Talent.com</a>
+      </div>
+    </div>
+
+    <footer>&copy; 2026 Serhii Pozhar — Hamilton, ON</footer>
   </div>
 </body>
 </html>
